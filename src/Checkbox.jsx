@@ -33,7 +33,7 @@ function CheckboxSF() {
             }
         }
         if (allChecked) {
-            setCheckedAll(true);
+            setCheckedAll(true); 
         } else {
             setCheckedAll(false);
         }

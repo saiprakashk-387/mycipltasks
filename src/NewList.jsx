@@ -11,7 +11,7 @@ const NewList = () => {
         setForm(User)
     }
     const add = () => {
-       let array = [];
+       let array = []; 
        array.push({...form});
        setformData(array)       
     }

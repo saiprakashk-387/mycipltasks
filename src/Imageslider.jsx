@@ -7,7 +7,7 @@ const Images = () => {
     const [currentImage, setCurrentImage] = useState(0);
 
     const handleImage = (e) => {
-        setfile(e.target.files)
+        setfile(e.target.files) 
     }
     const slidePrevious = () => {
         setCurrentImage((item) => {

@@ -8,7 +8,7 @@ const List = () => {
 
     const getSelected = (e, i, val) => {
         let contrlIndex = { ...index }
-        contrlIndex = i
+        contrlIndex = i 
         setIndex(contrlIndex);
         if (e.ctrlKey === true) {
             setSelect(val)

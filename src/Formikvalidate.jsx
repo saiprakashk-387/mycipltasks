@@ -53,7 +53,7 @@ const Formikapp = () => {
                 {formik.errors.password ? <div className="errors">{formik.errors.password}</div> : null}
 
                 <button type="submit">Register</button>
-
+   
             </form>
         </div>
     )
