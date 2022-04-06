@@ -7,9 +7,6 @@ import Userinput from './Userinput';
 import Images from './Imageslider';
 import CheckboxSF from './Checkbox';
 
-import Formikapp from './Formikvalidate';
-
-
 function App() {
   return (
     <div className="App">    
@@ -22,9 +19,6 @@ function App() {
      <Images/>
      <hr/>
      <CheckboxSF/>
-     <hr/>
- 
-  <Formikapp/>
     </div>
   );
 } 
