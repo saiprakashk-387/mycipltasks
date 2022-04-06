@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function CheckboxSF() {
     const [checkedAll, setCheckedAll] = useState(false);
-    const [checked, setChecked] = useState({ nr1: false, nr2: false, nr3: false });
+    const [checked, setChecked] = useState({ tag1: false, tag2: false, tag3: false });
     const [tagA, seTtagA] = useState(false)
     const [tagB, seTtagB] = useState(false)
     const [tagC, seTtagC] = useState(false)
@@ -41,6 +41,7 @@ function CheckboxSF() {
 
     return (
         <div className="App">
+            <h4>Check Box</h4>
             <div>
                 <form action="">
                     <label>All</label>
@@ -52,35 +53,35 @@ function CheckboxSF() {
                     <label>A</label>
                     <input
                         type="checkbox"
-                        name="nr1"
-                        onChange={() => toggleCheck("nr1")}
-                        checked={checked["nr1"]}
+                        name="tag1"
+                        onChange={() => toggleCheck("tag1")}
+                        checked={checked["tag1"]}
                     /> <br />
                     <label>B</label>
                     <input
                         type="checkbox"
-                        name="nr2"
-                        onChange={() => toggleCheck("nr2")}
-                        checked={checked["nr2"]}
+                        name="tag2"
+                        onChange={() => toggleCheck("tag2")}
+                        checked={checked["tag2"]}
                     /> <br />
                     <label>C</label>
                     <input
                         type="checkbox"
-                        name="nr3"
-                        onChange={() => toggleCheck("nr3")}
-                        checked={checked["nr3"]}
+                        name="tag3"
+                        onChange={() => toggleCheck("tag3")}
+                        checked={checked["tag3"]}
                     />
                 </form>
             </div>
             <div>
-                {checkedAll && checkedAll == true || checked && checked.nr1 == true ? <button onClick={() => { seTtagA(!tagA) }} > +Tag A</button> : null}
-                {checkedAll && checkedAll == true || checked && checked.nr2 == true ? <button onClick={() => { seTtagB(!tagB) }}> +Tag B</button> : null}
-                {checkedAll && checkedAll == true || checked && checked.nr3 == true ? <button onClick={() => { seTtagC(!tagC) }}> +Tag C</button> : null}
+                {checkedAll && checkedAll == true || checked && checked.tag1 == true ? <button onClick={() => { seTtagA(!tagA) }} > +Tag A</button> : null}
+                {checkedAll && checkedAll == true || checked && checked.tag2 == true ? <button onClick={() => { seTtagB(!tagB) }}> +Tag B</button> : null}
+                {checkedAll && checkedAll == true || checked && checked.tag3 == true ? <button onClick={() => { seTtagC(!tagC) }}> +Tag C</button> : null}
             </div>
             <div>
-                {tagA && checked && checked.nr1 == true ? <textarea rows="4" cols="50" /> : null}  <br />
-                {tagB && checked && checked.nr2 == true ? <textarea rows="4" cols="50" /> : null}  <br />
-                {tagC && checked && checked.nr3 == true ? <textarea rows="4" cols="50" /> : null}  <br />
+                {tagA && checked && checked.tag1 == true ? <textarea rows="4" cols="50" /> : null}  <br />
+                {tagB && checked && checked.tag2 == true ? <textarea rows="4" cols="50" /> : null}  <br />
+                {tagC && checked && checked.tag3 == true ? <textarea rows="4" cols="50" /> : null}  <br />
             </div>
         </div>
     );

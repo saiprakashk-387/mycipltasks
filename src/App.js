@@ -6,6 +6,9 @@ import Ref from './Useref';
 import Userinput from './Userinput';
 import Images from './Imageslider';
 import CheckboxSF from './Checkbox';
+import Formlogin from './LoginFormik';
+import Formikapp from './Formikvalidate';
+
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
      <Images/>
      <hr/>
      <CheckboxSF/>
+     <hr/>
+  {/* <Formlogin/> */}
+  <Formikapp/>
     </div>
   );
 } 
