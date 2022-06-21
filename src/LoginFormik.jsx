@@ -50,6 +50,7 @@ const Formlogin = () => {
           isValid,
           dirty
         } = formik;
+        console.log(dirty,isValid);
         return (
           <div className="container">
             <h1>Sign in to continue</h1>

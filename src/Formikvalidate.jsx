@@ -33,6 +33,7 @@ const Formikapp = () => {
         }
     })
     //console.log('form values', formik.values)
+
     return (
         <div className="App">
             <h4>Formik </h4>
@@ -41,7 +42,7 @@ const Formikapp = () => {
                 <input type="text" name="name" id="name"
                     value={formik.values.name} onChange={formik.handleChange} />
                 {formik.errors.name ? <div className="errors">{formik.errors.name}</div> : null}
-                
+
                 <label>E-mail</label>
                 <input type="email" name="email" id="email"
                     value={formik.values.email} onChange={formik.handleChange} />
@@ -53,7 +54,7 @@ const Formikapp = () => {
                 {formik.errors.password ? <div className="errors">{formik.errors.password}</div> : null}
 
                 <button type="submit">Register</button>
-   
+
             </form>
         </div>
     )
