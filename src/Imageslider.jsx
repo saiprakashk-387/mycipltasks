@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import image from './Imgfiles/image1.jpg'
-// import './Images.css'
  
 const Images = () => {
     const [file, setfile] = useState([])
