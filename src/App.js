@@ -19,6 +19,7 @@ import Example from './Crudnew/File'
 import TreeView from './TreeView';
 import Table from './Table';
 import Occurence from './Occurence';
+import Codebox from './Codebox';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -57,7 +58,7 @@ function App() {
       {/* <hr /> */}
       {/* <Formlogin/> */}
       {/* <hr /> */}
-
+<Codebox/>
       {/* <Formikapp />  */}
     </div>
   );
