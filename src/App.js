@@ -20,6 +20,7 @@ import TreeView from './TreeView';
 import Table from './Table';
 import Occurence from './Occurence';
 import Codebox from './Codebox';
+import ZoomImage from './ZoomImage';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -54,12 +55,13 @@ function App() {
       {/* <Cookieapp /> */}
       {/* <hr /> */}
       <CheckboxSF />
-      <Occurence/>
+      {/* <Occurence/> */}
       {/* <hr /> */}
       {/* <Formlogin/> */}
       {/* <hr /> */}
-<Codebox/>
+{/* <Codebox/> */}
       {/* <Formikapp />  */}
+      <ZoomImage/>
     </div>
   );
 }

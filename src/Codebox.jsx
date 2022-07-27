@@ -24,7 +24,7 @@ export default function Codebox() {
     })
     .filter((sh) => sh !== undefined);
   return (
-    <div className="App"> 
+    <div className="App">
       <select
         onChange={(e) => {
           getCountryId(e);
@@ -32,19 +32,13 @@ export default function Codebox() {
       >
         <option> select Country</option>
         {cities?.map((val, i) => {
-          return <option key={i} value={val?.country}>{val?.country}</option>;
+          return (
+            <option key={i} value={val?.country}>
+              {val?.country}
+            </option>
+          );
         })}
       </select>{" "}
-       
-        {/* {cities?.map((val, i) => {
-            countryID == val.country &&  val.cities.map(v=>{
-              console.log("vvvvvvvvvvvvvvvvvv",v);
-              return (
-                <h1 key ={v+"1"} value={v}>{v+"uuu"}</h1>
-              )
-            })
-        })} */}
-    
       <br />
       {data && (
         <select>
