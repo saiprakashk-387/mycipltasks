@@ -21,6 +21,9 @@ import Table from './Table';
 import Occurence from './Occurence';
 import Codebox from './Codebox';
 import ZoomImage from './ZoomImage';
+import PdfViewer from './PdfViewer';
+import ReactTree from './ReactTree';
+import DevHtml from './DevHtml';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -40,6 +43,8 @@ function App() {
       <h2>
         {cookies.user && <p>{cookies.user}</p>}  </h2>
       {/* <List/> */}
+      {/* <hr/> */}
+      {/* <ReactTree/> */}
       {/* <TreeView/> */}
       {/* <Table/> */}
       {/* <Example/> */}
@@ -48,20 +53,23 @@ function App() {
       {/* <Userinput/> */}
       {/* <Ref/> */}
       {/* <hr /> */}
-       <Images />
-      <hr />
-      {/* <Googleauth /> */}
-      <hr />
-      {/* <Cookieapp /> */}
+       {/* <Images />
+       <br/> */}
+       <DevHtml/>
+              {/* <Googleauth /> */}
+       {/* <Cookieapp /> */}
       {/* <hr /> */}
-      <CheckboxSF />
+      {/* <CheckboxSF /> */}
       {/* <Occurence/> */}
       {/* <hr /> */}
       {/* <Formlogin/> */}
       {/* <hr /> */}
 {/* <Codebox/> */}
       {/* <Formikapp />  */}
-      <ZoomImage/>
+      <br/>
+      {/* <ZoomImage/> */}
+      <br/> 
+      {/* <PdfViewer/> */}
     </div>
   );
 }

@@ -60,5 +60,21 @@ const Occurence = () => {
   )
 }
 
+// Initial array
+const array1 =["apple","apple","banana","banana","pineapple","pineapple","waterapple"]
+
+////without duplicates
+const removeduplicate = [...new Set(array1)];
+
+const countduplicates = removeduplicate.map(val=>[
+    val, array1.filter(value=> value === val).length])
+
+console.log("countduplicates",countduplicates)
+
+// output [ [ 'apple', 2 ],
+//   [ 'banana', 2 ],
+//   [ 'pineapple', 2 ],
+//   [ 'waterapple', 1 ] ]
+
 export default Occurence
 

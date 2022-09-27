@@ -30,7 +30,7 @@ const List = () => {
             <div>
                 <ul style={{ "listStyle": "none" }}>
                     {subjects.map((val, i) => {
-                        if (select == val || index == i) {
+                        if ( index == i) {
                             // console.log("index matched ", i);
                             return (
                                 <li style={{ "backgroundColor": "grey" }} key={i} value={val} onClick={(e) => { getSelected(e, i, val) }} >{val}</li>
