@@ -3,7 +3,7 @@ import image from './Imgfiles/image1.jpg'
  
 const Images = () => {
     const [file, setfile] = useState([])
-    const [currentImage, setCurrentImage] = useState(0);
+    const [currentImage, setCurrentImage] = useState(1);
 
     const handleImage = (e) => {
         setfile(e.target.files) 
@@ -37,7 +37,10 @@ const Images = () => {
                     </div>
                 }
             </div>
-            <button type='button'> <input type="file" name="image" multiple onChange={handleImage} /></button>
+            {file?.length !== 1 && 
+             <button type='button'> <input type="file" name="image" multiple onChange={handleImage} /></button>
+            }
+           
             {
                 file.length >= 1 ?
                     <div>

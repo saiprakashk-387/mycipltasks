@@ -40,3 +40,26 @@
 .errors{
   color: red;
 }
+
+
+.img-wrapper {
+  overflow: hidden;
+}
+
+img.hover-zoom {
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+img.hover-zoom:hover {
+  transform: scale(1.25);
+}
+
+.girl
+{
+  display: inline-block;
+  
+  padding: 5px;
+  margin-top: 30px;
+  margin-left:  50px;
+  margin-right: 50px; 
+}

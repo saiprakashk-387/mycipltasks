@@ -1,0 +1,62 @@
+
+body {
+    background-image: url('./Imgfiles/bg-cover.png');
+  }
+.img-div {
+    display: inline-flex;
+    margin-top: 8rem;
+}
+/* .img-div p {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 500;
+} */
+ 
+.zoom {
+
+    transition: transform .2s;
+    margin: 1rem;
+  }
+  .zoom img{
+    width: 200px;
+  }
+  .zoom:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5);
+    background-image: url('./Imgfiles/wheel-bg.jpg');
+    transform: scale(1.1); 
+    object-fit: contain;
+    margin:0rem 3rem;
+    border:solid 1px black;
+    border-radius: 10px;
+    padding: 1rem;
+
+  }
+  .btnclcik{
+    border: none;
+    background: none;
+    font-size: 3rem;
+  }
+.firstptag {
+    text-align: start;
+    margin-left: 25px;
+    font-family: 'Varta';
+  font-style: italic;
+  /* font-weight: 500; */
+}
+.spanwhell {
+     border-left: solid 4px black;
+    padding-left: 5px;
+    font-style: normal !important;
+    border: 0px 2px 0px 0px;
+}
+.code{
+  /* font-style: bold; */
+  font-weight: 700;
+}
+.midtxt{
+
+}
+.headxt{
+    font-weight: 700;
+}
