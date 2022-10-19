@@ -24,6 +24,7 @@ import ZoomImage from './ZoomImage';
 import PdfViewer from './PdfViewer';
 import ReactTree from './ReactTree';
 import DevHtml from './DevHtml';
+import Folderupload from './Folderupload'
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -55,7 +56,7 @@ function App() {
       {/* <hr /> */}
        {/* <Images />
        <br/> */}
-       <DevHtml/>
+       {/* <DevHtml/> */}
               {/* <Googleauth /> */}
        {/* <Cookieapp /> */}
       {/* <hr /> */}
@@ -70,6 +71,7 @@ function App() {
       {/* <ZoomImage/> */}
       <br/> 
       {/* <PdfViewer/> */}
+      <Folderupload/>
     </div>
   );
 }
