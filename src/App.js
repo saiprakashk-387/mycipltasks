@@ -24,6 +24,7 @@ import ZoomImage from './ZoomImage';
 import PdfViewer from './PdfViewer';
 import ReactTree from './ReactTree';
 import DevHtml from './DevHtml';
+import Newfolderuplod from './Newfolderuplod'
 import Folderupload from './Folderupload'
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
       <br/> 
       {/* <PdfViewer/> */}
       <Folderupload/>
+      {/* <Newfolderuplod/> */}
     </div>
   );
 }
