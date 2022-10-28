@@ -1,67 +1,66 @@
 import React, { useState, useEffect } from "react";
 
-function Folderupload() {
-   const [file1, setFile1] = useState();
-  const [file2, setFile2] = useState();
-  const [values, setValues] = useState();
-  const [newValues, setNewValues] = useState();
+// function Folderupload() {
+//    const [file1, setFile1] = useState();
+//   const [file2, setFile2] = useState();
+//   const [values, setValues] = useState();
+//   const [newValues, setNewValues] = useState();
 
-  const folderChange = async (e) => {
-    setFile1(e.target.files[0]);
-    setFile2(e.target.files[1]);
-  };
-  useEffect(() => {
-    if (file2 && file1) {
-      v1();
-      v2();
-    }
-  }, [file1, file2]);
-  const v1 = () => {
-    var file = file1;
-    var reader = new FileReader();
+//   const folderChange = async (e) => {
+//     setFile1(e.target.files[0]);
+//     setFile2(e.target.files[1]);
+//   };
+//   useEffect(() => {
+//     if (file2 && file1) {
+//       v1();
+//       v2();
+//     }
+//   }, [file1, file2]);
+//   const v1 = () => {
+//     var file = file1;
+//     var reader = new FileReader();
 
-    if (file) {
-      reader.onload = function (event) {
-        setValues(event.target.result);
-      };
-    } else {
-      setValues("It doesn't seem to be a text file!");
-    }
-    reader.readAsText(file);
-  };
-  const v2 = () => {
-    var file = file2;
-    var reader = new FileReader();
+//     if (file) {
+//       reader.onload = function (event) {
+//         setValues(event.target.result);
+//       };
+//     } else {
+//       setValues("It doesn't seem to be a text file!");
+//     }
+//     reader.readAsText(file);
+//   };
+//   const v2 = () => {
+//     var file = file2;
+//     var reader = new FileReader();
 
+//     if (file) {
+//       reader.onload = function (event) {
+//         setNewValues(event.target.result);
+//       };
+//     } else {
+//       setNewValues("It doesn't seem to be a text file!");
+//     }
+//     reader.readAsText(file);
+//   };
 
-    if (file) {
-      reader.onload = function (event) {
-        setNewValues(event.target.result);
-      };
-    } else {
-      setNewValues("It doesn't seem to be a text file!");
-    }
-    reader.readAsText(file);
-  };
+//   return (
+//     <div style={{ margin: 30 }}>
+//       <input
+//         type="file"
+//         id="flup"
+//         webkitdirectory="true"
+//         onChange={(e) => folderChange(e)}
+//       />
 
-  return (
-    <div style={{ margin: 30 }}>
-      <input
-        type="file"
-        id="flup"
-        webkitdirectory="true"
-        onChange={(e) => folderChange(e)}
-      />
+//       <ul>
+//         <li>{values}</li>
+//         <li>{newValues}</li>
+//       </ul>
+//     </div>
+//   );
+// }
 
-      <ul>
-        <li>{values}</li>
-        <li>{newValues}</li>
-      </ul>
-    </div>
-  );
-}
-
-export default Folderupload;
+// export default Folderupload;
 
 // import React, { Component } from "react";
 
@@ -146,3 +145,75 @@ export default Folderupload;
 // }
 
 // export default Folderupload;
+
+// class Folderupload extends React.Component {
+//   render() {
+//   const adminCodes = ["India", "USA", "UK", "UAE"];
+
+//   return (
+//    <div>
+//      <ul>
+//        {adminCodes.map((item) => (
+//          <li
+//            key={item}
+//            style={{ cursor: "pointer" }}
+//            onClick={() => handleListCountryClick(item)}
+//          >
+//            {item}
+//          </li>
+//        ))}
+//      </ul>
+//    </div>
+//    );
+//   }
+//  }
+
+//   const handleListCountryClick = (item) => {
+//         console.log(`I'm a ${item}!`);
+//  };
+
+//  export default Folderupload;
+
+const Folderupload = () => {
+  const adminCodes = ["India", "USA", "UK", "UAE"];
+  const listItems =[
+    {
+      name:"USA",
+      value:"usa"
+    },
+    {
+      name:"INDIA",
+      value:"india"
+    },
+    {
+      name:"UK",
+      value:"uk"
+    },
+    {
+      name:"UAE",
+      value:"uae"
+    }
+  ]
+
+    const handleListCountryClick = (item) => {
+        console.log(`I'm a ${item}!`);
+ };
+
+  return (
+    <div>
+      <ul>
+        {listItems.map((listItems,i) => (
+           <li
+            key={i}
+            style={{ cursor: "pointer" }}
+            onClick={() => handleListCountryClick(listItems.value)}
+          >
+            {listItems.name}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Folderupload;
