@@ -146,35 +146,9 @@ import React, { useState, useEffect } from "react";
 
 // export default Folderupload;
 
-// class Folderupload extends React.Component {
-//   render() {
-//   const adminCodes = ["India", "USA", "UK", "UAE"];
-
-//   return (
-//    <div>
-//      <ul>
-//        {adminCodes.map((item) => (
-//          <li
-//            key={item}
-//            style={{ cursor: "pointer" }}
-//            onClick={() => handleListCountryClick(item)}
-//          >
-//            {item}
-//          </li>
-//        ))}
-//      </ul>
-//    </div>
-//    );
-//   }
-//  }
-
-//   const handleListCountryClick = (item) => {
-//         console.log(`I'm a ${item}!`);
-//  };
-
-//  export default Folderupload;
 
 const Folderupload = () => {
+  const [value, setvalue] = useState()
   const adminCodes = ["India", "USA", "UK", "UAE"];
   const listItems =[
     {
@@ -198,9 +172,15 @@ const Folderupload = () => {
     const handleListCountryClick = (item) => {
         console.log(`I'm a ${item}!`);
  };
+///remove duplicate words from sentence 
+//  const data = value&& value.split(/[ ,]+/);
+ const data = value&& value.split(" ");
+ const val =  [...new Set(data)]
+console.log("value",val);
 
   return (
     <div>
+      <input type="text" onChange={(e)=>{setvalue(e.target.value)}} />
       <ul>
         {listItems.map((listItems,i) => (
            <li

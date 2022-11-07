@@ -76,5 +76,7 @@ const countduplicates = removeduplicate.map(val=>[
 //   [ 'pineapple', 2 ],
 //   [ 'waterapple', 1 ] ]
 
+// /**********************// refer folderupload file/****************// 
+
 export default Occurence
 
