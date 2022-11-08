@@ -146,44 +146,76 @@ import React, { useState, useEffect } from "react";
 
 // export default Folderupload;
 
-
 const Folderupload = () => {
-  const [value, setvalue] = useState()
+  const [value, setvalue] = useState();
   const adminCodes = ["India", "USA", "UK", "UAE"];
-  const listItems =[
+  const listItems = [
     {
-      name:"USA",
-      value:"usa"
+      name: "USA",
+      value: "usa",
     },
     {
-      name:"INDIA",
-      value:"india"
+      name: "INDIA",
+      value: "india",
     },
     {
-      name:"UK",
-      value:"uk"
+      name: "UK",
+      value: "uk",
     },
     {
-      name:"UAE",
-      value:"uae"
-    }
-  ]
+      name: "UAE",
+      value: "uae",
+    },
+  ];
 
-    const handleListCountryClick = (item) => {
-        console.log(`I'm a ${item}!`);
- };
-///remove duplicate words from sentence 
-//  const data = value&& value.split(/[ ,]+/);
- const data = value&& value.split(" ");
- const val =  [...new Set(data)]
-console.log("value",val);
+  const handleListCountryClick = (item) => {
+    console.log(`I'm a ${item}!`);
+  };
+
+  ///check string has whitespace
+  function hasWhiteSpace(s) {
+    return s.indexOf(' ') >= 0;
+  }
+let check = value && hasWhiteSpace(value)
+console.log("checkwhitespace",check);
+
+////whitespace count in string
+function whitespacelength (str){
+    return str.split(" ").length-1
+}
+
+  ///remove duplicate words from sentence
+
+  const data = value && value.split(" "); ////duplicates words in string with count
+  const val = [...new Set(data)];
+  // console.log("removeduplicatewords",data);
+  const countduplicates = val.map((val) => [
+    val,
+    data.filter((value) => value === val).length,
+  ]);
+
+  // console.log("countduplicatewords",countduplicates);
+
+  const dataa = value && value.split(""); ///duplicates count in word
+  const vall = [...new Set(data)];
+  const countduplicatess = vall.map((val) => [
+    val,
+    dataa.filter((value) => value === val).length,
+  ]);
+  // console.log("duplicate letters",vall);
+  // console.log("countduplicateletters",countduplicatess);
 
   return (
     <div>
-      <input type="text" onChange={(e)=>{setvalue(e.target.value)}} />
+      <input
+        type="text"
+        onChange={(e) => {
+          setvalue(e.target.value);
+        }}
+      />
       <ul>
-        {listItems.map((listItems,i) => (
-           <li
+        {listItems.map((listItems, i) => (
+          <li
             key={i}
             style={{ cursor: "pointer" }}
             onClick={() => handleListCountryClick(listItems.value)}

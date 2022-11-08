@@ -26,6 +26,7 @@ import ReactTree from './ReactTree';
 import DevHtml from './DevHtml';
 import Newfolderuplod from './Newfolderuplod'
 import Folderupload from './Folderupload'
+import StringMethod from './StringMethod';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -53,7 +54,7 @@ function App() {
       {/* <NewList/> */}
       {/* <hr /> */}
       {/* <Userinput/> */}
-      {/* <Ref/> */}
+      {/* <Ref/> <hr/> */}
       {/* <hr /> */}
        {/* <Images />
        <br/> */}
@@ -72,7 +73,8 @@ function App() {
       {/* <ZoomImage/> */}
       <br/> 
       {/* <PdfViewer/> */}
-      <Folderupload/>
+      {/* <Folderupload/> */}
+      <StringMethod/>
       {/* <Newfolderuplod/> */}
     </div>
   );

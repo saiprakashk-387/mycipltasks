@@ -43,8 +43,7 @@ const Occurence = () => {
     }
     return result;
   }
-
-  // console.log("arr", fun(arr));
+  
   ///most occuring element method 3///
   function mode(arr) {
     return arr
