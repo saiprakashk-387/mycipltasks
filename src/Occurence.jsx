@@ -20,7 +20,7 @@ const Occurence = () => {
 
   const array = [1, 2, 1, 1, 1, 2, 2, 2, 1];
 
-  console.log("mostOccurringElement", mostOccurringElement(array));
+  // console.log("mostOccurringElement", mostOccurringElement(array));
   ///most occuring element method 2///
   const arr = [2, 1, 6, 2, 2, 1, 5, 2];
   let count = 0;
@@ -43,8 +43,7 @@ const Occurence = () => {
     }
     return result;
   }
-
-  console.log("arr", fun(arr));
+  
   ///most occuring element method 3///
   function mode(arr) {
     return arr
@@ -54,7 +53,7 @@ const Occurence = () => {
       )
       .pop();
   }
-  console.log("mode", mode([2, 1, 6, 2, 2, 1, 5, 2]));
+  // console.log("mode", mode([2, 1, 6, 2, 2, 1, 5, 2]));
   return (
     <div>Occurence</div>
   )
@@ -69,12 +68,14 @@ const removeduplicate = [...new Set(array1)];
 const countduplicates = removeduplicate.map(val=>[
     val, array1.filter(value=> value === val).length])
 
-console.log("countduplicates",countduplicates)
+// console.log("countduplicates",countduplicates)
 
 // output [ [ 'apple', 2 ],
 //   [ 'banana', 2 ],
 //   [ 'pineapple', 2 ],
 //   [ 'waterapple', 1 ] ]
+
+// /**********************// refer folderupload file/****************// 
 
 export default Occurence
 

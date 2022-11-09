@@ -24,6 +24,10 @@ import ZoomImage from './ZoomImage';
 import PdfViewer from './PdfViewer';
 import ReactTree from './ReactTree';
 import DevHtml from './DevHtml';
+import Newfolderuplod from './Newfolderuplod'
+import Folderupload from './Folderupload'
+import StringMethod from './StringMethod';
+import Todos from './Todos';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -51,11 +55,11 @@ function App() {
       {/* <NewList/> */}
       {/* <hr /> */}
       {/* <Userinput/> */}
-      {/* <Ref/> */}
+      {/* <Ref/> <hr/> */}
       {/* <hr /> */}
        {/* <Images />
        <br/> */}
-       <DevHtml/>
+       {/* <DevHtml/> */}
               {/* <Googleauth /> */}
        {/* <Cookieapp /> */}
       {/* <hr /> */}
@@ -70,6 +74,10 @@ function App() {
       {/* <ZoomImage/> */}
       <br/> 
       {/* <PdfViewer/> */}
+      {/* <Folderupload/> */}
+      {/* <StringMethod/> */}
+      <Todos/>
+      {/* <Newfolderuplod/> */}
     </div>
   );
 }
