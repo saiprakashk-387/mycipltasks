@@ -28,6 +28,7 @@ import Newfolderuplod from './Newfolderuplod'
 import Folderupload from './Folderupload'
 import StringMethod from './StringMethod';
 import Todos from './Todos';
+import ImageConversion from './ImageConversion';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -76,7 +77,8 @@ function App() {
       {/* <PdfViewer/> */}
       {/* <Folderupload/> */}
       {/* <StringMethod/> */}
-      <Todos/>
+      {/* <Todos/> */}
+      <ImageConversion/>
       {/* <Newfolderuplod/> */}
     </div>
   );
