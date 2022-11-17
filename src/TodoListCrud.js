@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react'
+import React from 'react'
 import { useState } from 'react';
 
 const TodoListCrud = () => {
@@ -8,7 +8,6 @@ const TodoListCrud = () => {
     const [editIndex, setEditIndex] = useState(-1)
 
     const handleInput = (val) => {
-        console.log("valu", val.target.value)
         setValeu(val.target.value)
     }
 
@@ -18,20 +17,17 @@ const TodoListCrud = () => {
             "result": valeu,
         }        
         profile.push(user)
-        // console.log("prof", profile)
         setProfile([...profile])
         saveListner()
 
     }
 
     const checked = (item) => {
-        // console.log("itm", item)
         item.isSelected = !item.isSelected
         setProfile([...profile])
     }
 
     const removeListner = (item) => {
-        // console.log("remove", item)
         const indx = profile.indexOf(item)
         const x = profile.splice(indx, 1)
         setProfile([...profile])
