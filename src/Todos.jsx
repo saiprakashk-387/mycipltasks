@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Moment from 'moment';
 
 const Todos = () => {
   const inputElement = useRef(null);
@@ -10,6 +11,7 @@ const Todos = () => {
   const [edit, setEdit] = useState(); //set edit value
   const [isOff, setIsOff] = useState(false); ///handle table with checkbox
 
+  console.log(Moment("Thu Jan 19 2023 00:00:00 GMT+0530").format('YYYY-MM-DD h:mm:ss:SSS ZZ'))
   const addTodo = () => {
     if (value) {
       setlist([...list, value]);
@@ -58,6 +60,17 @@ const Todos = () => {
     setbtn(false);
   };
 
+
+  const dots = (brrScore) => {
+    return Array(brrScore)
+      .fill()
+      .map((i, index) => (
+        <span key={index} className="dot"></span>
+      ))
+  }
+  // console.log("arr", dots(2))
+  // const arr = Array(3).fill().map((v, i) => <span>{"*"}</span>)
+  // console.log("arr", arr);
   return (
     <div>
       <div>
@@ -77,7 +90,8 @@ const Todos = () => {
             Add Todos
           </button>
         )}
-
+        {/* {dots(3)} */}
+        {/* {arr} */}
         {btn && (
           <button
             style={{ color: "#f45e32" }}
@@ -90,7 +104,7 @@ const Todos = () => {
       {list?.length >= 1 && (
         <div style={{ padding: "5px" }}>
           <button onClick={() => setIsOff(!isOff)}>
-            {isOff ? "Off" : "Try With CheckBox"}
+            {isOff ? "turnOff checkbox" : "Try With CheckBox"}
           </button>
           {isOff ? (
             <table
@@ -142,8 +156,8 @@ const Todos = () => {
               style={{
                 width: "30%",
                 margin: "auto",
-                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                backgroundColor: "mintcream  ",
+                // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                // backgroundColor: "mintcream  ",
               }}
             >
               <thead>

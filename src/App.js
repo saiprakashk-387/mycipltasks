@@ -23,7 +23,6 @@ import Codebox from './Codebox';
 import ZoomImage from './ZoomImage';
 import PdfViewer from './PdfViewer';
 import ReactTree from './ReactTree';
-import DevHtml from './DevHtml';
 import Newfolderuplod from './Newfolderuplod'
 import Folderupload from './Folderupload'
 import StringMethod from './StringMethod';
@@ -31,6 +30,9 @@ import Todos from './Todos';
 import ImageConversion from './ImageConversion';
 import TodoList from './TodoListCrud';
 import TodoListCrud from './TodoListCrud';
+import Print from './Print';
+import DownloadPrint from './PrintComponents/DownloadPrint';
+import Chart  from './Barchart';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -43,12 +45,13 @@ function App() {
   
   return (
     <div className="App">
-      <ApolloProvider client={client}>
+       {/* <Chart/>    */}
+          {/* <ApolloProvider client={client}> */}
         {/* <Graph /> */}
         {/* <Graph1/> */}       
-      </ApolloProvider>
-      <h2>
-        {cookies.user && <p>{cookies.user}</p>}  </h2>
+      {/* </ApolloProvider> */}
+      {/* <h2>
+        {cookies.user && <p>{cookies.user}</p>}  </h2> */}
       {/* <List/> */}
       {/* <hr/> */}
       {/* <ReactTree/> */}
@@ -62,7 +65,6 @@ function App() {
       {/* <hr /> */}
        {/* <Images />
        <br/> */}
-       {/* <DevHtml/> */}
               {/* <Googleauth /> */}
        {/* <Cookieapp /> */}
       {/* <hr /> */}
@@ -80,6 +82,8 @@ function App() {
       {/* <Folderupload/> */}
       {/* <StringMethod/> */}
       <Todos/>
+      {/* <DownloadPrint/> */}
+     
       {/* <ImageConversion/> */}
      {/* <TodoListCrud/>  */}
       {/* <Newfolderuplod/> */}
