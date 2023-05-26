@@ -39,6 +39,7 @@ import Login from './Login';
 import Chartjs from './Chartjs';
 import Practise from './Practise';
 import Conversion from './conversion';
+import AgeCalculator from './AgeCalculator';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -88,7 +89,7 @@ function App() {
       {/* <PdfViewer/> */}
       {/* <Folderupload/> */}
       {/* <StringMethod/> */}
-      <Todos/>
+      {/* <Todos/> */}
       {/* <DownloadPrint/> */}
      
       {/* <ImageConversion/> */}
@@ -99,6 +100,7 @@ function App() {
       {/* <Chartjs/> */}
       {/* <Conversion/> */}
       {/* <Practise/> */}
+      <AgeCalculator/>
     </div>
   );
 }
