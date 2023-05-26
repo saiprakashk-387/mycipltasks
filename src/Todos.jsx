@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Moment from 'moment';
+import './progrsss.css'
 
 const Todos = () => {
   const inputElement = useRef(null);
@@ -11,7 +12,7 @@ const Todos = () => {
   const [edit, setEdit] = useState(); //set edit value
   const [isOff, setIsOff] = useState(false); ///handle table with checkbox
 
-  console.log(Moment("Thu Jan 19 2023 00:00:00 GMT+0530").format('YYYY-MM-DD h:mm:ss:SSS ZZ'))
+  // console.log(Moment("Thu Jan 19 2023 00:00:00 GMT+0530").format('YYYY-MM-DD h:mm:ss:SSS ZZ'))
   const addTodo = () => {
     if (value) {
       setlist([...list, value]);
@@ -20,7 +21,7 @@ const Todos = () => {
       setError("please enter text");
     }
   };
-
+// console.log('list',list);
   const onChange = (e) => {
     setValue(e.target.value);
   };
@@ -71,9 +72,66 @@ const Todos = () => {
   // console.log("arr", dots(2))
   // const arr = Array(3).fill().map((v, i) => <span>{"*"}</span>)
   // console.log("arr", arr);
+  const loadedApiCount = 45
   return (
     <div>
       <div>
+      {/* <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          position: "fixed",
+          backgroundColor: "#ffffff",
+          top: "0",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        <h3
+          style={{
+            width: "30%",
+            position: "absolute",
+            top: "30%",
+            left: "35%",
+            color: "black",
+          }}
+        >
+          {loadedApiCount === 57
+            ? "Report generated, Click download to generate PDF"
+            : "Report is being generated, please wait..."}
+        </h3>
+        <progress
+          style={{
+            width: "30%",
+            height: "3%",
+            position: "absolute",
+            top: "38%",
+            left: "35%",
+            marginBottom: "3rem",
+            // backgroundColor:"red"
+          }}
+          value={loadedApiCount}
+          max="57"
+        />
+        <button
+          // onClick={handlePrint}
+          style={{
+            height: "100px",
+            color: loadedApiCount === 57 ? "white" : "black",
+            fontSize: "20px",
+            backgroundColor: loadedApiCount === 57 ? "#0B9D09" : "lightGrey",
+            borderRadius: "90px",
+            width: "30%",
+            margin: "auto",
+            cursor: "pointer",
+            outline: "none",
+            border: loadedApiCount === 57 ? "none" : "black",
+          }}
+          disabled={loadedApiCount !== 57}
+        >
+          Download
+        </button>
+      </div> */}
         <input
           ref={inputElement}
           type="text"

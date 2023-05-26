@@ -44,8 +44,8 @@ const Chart = () => {
     const barChart = (
         <Bar
             type="bar"
-            width={50}
-            height={50}
+            width={20}
+            height={30}
             options={{
                 title: {
                     display: true,
@@ -98,6 +98,8 @@ const Chart = () => {
             data={barChartData}
         />
     );
-    return barChart;
+    return (
+        <div >{barChart}</div>
+    );
 };
 export default Chart;

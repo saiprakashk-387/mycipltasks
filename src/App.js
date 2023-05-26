@@ -33,6 +33,12 @@ import TodoListCrud from './TodoListCrud';
 import Print from './Print';
 import DownloadPrint from './PrintComponents/DownloadPrint';
 import Chart  from './Barchart';
+import MultiImage from './MultiImage';
+import Printexcel from './Printexcel';
+import Login from './Login';
+import Chartjs from './Chartjs';
+import Practise from './Practise';
+import Conversion from './conversion';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -66,6 +72,7 @@ function App() {
        {/* <Images />
        <br/> */}
               {/* <Googleauth /> */}
+              {/* <Login/> */}
        {/* <Cookieapp /> */}
       {/* <hr /> */}
       {/* <CheckboxSF /> */}
@@ -87,6 +94,11 @@ function App() {
       {/* <ImageConversion/> */}
      {/* <TodoListCrud/>  */}
       {/* <Newfolderuplod/> */}
+      {/* <MultiImage/> */}
+      {/* <Printexcel/> */}
+      {/* <Chartjs/> */}
+      {/* <Conversion/> */}
+      {/* <Practise/> */}
     </div>
   );
 }
