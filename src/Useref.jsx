@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import { useCallback } from "react";
+import Form from "./Form";
 
 function Ref() {
   const inputElement = useRef(' ');
@@ -20,13 +22,13 @@ function Ref() {
   }
 
   return (
-    <>
+    <><>
       <h1>useRef</h1>
       Name: <input type="text" ref={inputElement} />
       Email: <input type="text" ref={inputElement1} />
       Place: <input type="text" ref={inputElement2} />
       <button onClick={onSubmit}>Focus Input</button>
-    </>
+    </><Form /></>
   );
 }
 export default Ref;

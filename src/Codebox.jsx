@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { GetData } from "./Constants";
 
 export default function Codebox() {
   const [cities, setcities] = useState([]);
   const [countryID, setcountryID] = useState("");
+
+
   useEffect(() => {
-    const dar = axios
-      .get("https://countriesnow.space/api/v0.1/countries")
-      .then((res) => {
-        setcities(res.data.data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    GetData('get','https://countriesnow.space/api/v0.1/countries').then((res)=>{
+      setcities(res.data.data)
+      console.log('rss',res);
+    }).catch((err)=>{
+      console.log('err',err);
+    })
+    // axios
+    //   .get("https://countriesnow.space/api/v0.1/countries")
+    //   .then((res) => {
+    //     setcities(res.data.data);
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //   });
   }, []);
   const getCountryId = (e) => {
     setcountryID(e.target.value);

@@ -40,6 +40,7 @@ import Chartjs from './Chartjs';
 import Practise from './Practise';
 import Conversion from './conversion';
 import AgeCalculator from './AgeCalculator';
+import Studentmarks from './Studentmarks';
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -68,7 +69,7 @@ function App() {
       {/* <NewList/> */}
       {/* <hr /> */}
       {/* <Userinput/> */}
-      {/* <Ref/> <hr/> */}
+      <Ref/> <hr/>
       {/* <hr /> */}
        {/* <Images />
        <br/> */}
@@ -81,7 +82,7 @@ function App() {
       {/* <hr /> */}
       {/* <Formlogin/> */}
       {/* <hr /> */}
-{/* <Codebox/> */}
+<Codebox/>
       {/* <Formikapp />  */}
       <br/>
       {/* <ZoomImage/> */}
@@ -100,7 +101,8 @@ function App() {
       {/* <Chartjs/> */}
       {/* <Conversion/> */}
       {/* <Practise/> */}
-      <AgeCalculator/>
+      {/* <AgeCalculator/> */}
+      {/* <Studentmarks/> */}
     </div>
   );
 }
