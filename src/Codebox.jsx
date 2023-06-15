@@ -7,13 +7,21 @@ export default function Codebox() {
   const [countryID, setcountryID] = useState("");
 
 
-  useEffect(() => {
-    GetData('get','https://countriesnow.space/api/v0.1/countries').then((res)=>{
-      setcities(res.data.data)
-      console.log('rss',res);
-    }).catch((err)=>{
-      console.log('err',err);
-    })
+  useEffect(async () => {
+    try{
+      let dta= await GetData('get','countries')
+      console.log('dta',dta);
+    }catch(error){
+      throw error
+    }
+
+  
+    // GetData('get','countries').then((res)=>{
+    //   setcities(res.data.data)
+    //   console.log('rss',res);
+    // }).catch((err)=>{
+    //   console.log('err',err);
+    // })
     // axios
     //   .get("https://countriesnow.space/api/v0.1/countries")
     //   .then((res) => {

@@ -82,7 +82,7 @@ function App() {
       {/* <hr /> */}
       {/* <Formlogin/> */}
       {/* <hr /> */}
-<Codebox/>
+{/* <Codebox/> */}
       {/* <Formikapp />  */}
       <br/>
       {/* <ZoomImage/> */}
@@ -100,7 +100,7 @@ function App() {
       {/* <Printexcel/> */}
       {/* <Chartjs/> */}
       {/* <Conversion/> */}
-      {/* <Practise/> */}
+      <Practise/>
       {/* <AgeCalculator/> */}
       {/* <Studentmarks/> */}
     </div>
