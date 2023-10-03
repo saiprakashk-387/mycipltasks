@@ -1,7 +1,8 @@
 import React from "react";
+import { memo } from "react";
 
 const Timer = () => {
-  const [counter, setCounter] = React.useState(60);
+  const [counter, setCounter] = React.useState(10);
   // First Attempts
   // setInterval(() => setCounter(counter - 1), 1000);
 
@@ -32,9 +33,16 @@ const Timer = () => {
   //   }, [counter]);
   return (
     <div>
-      <div>Countdown: {counter}</div>
+      <div>
+        Countdown: {counter} seconds
+        {counter === 0 ? (
+          <button>Go</button>
+        ) : (
+          <button disabled>please wait...</button>
+        )}
+      </div>
     </div>
   );
 };
 
-export default Timer;
+export default memo(Timer);

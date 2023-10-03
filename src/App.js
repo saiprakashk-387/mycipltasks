@@ -43,6 +43,8 @@ import AgeCalculator from "./AgeCalculator";
 import Studentmarks from "./Studentmarks";
 import BrowserDom from "./BrowserDom";
 import Timer from "./Timer";
+import Stopwatch from "./Stopwatch";
+// import FormSubmit from "./FormSubmit";
 
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -102,8 +104,10 @@ function App() {
       {/* <Chartjs/> */}
       {/* <Conversion/> */}
       {/* <Practise/> */}
-      <BrowserDom />
+      {/* <BrowserDom /> */}
       <Timer />
+      {/* <Stopwatch /> */}
+      {/* <FormSubmit /> */}
       {/* <AgeCalculator/> */}
       {/* <Studentmarks/> */}
     </div>
